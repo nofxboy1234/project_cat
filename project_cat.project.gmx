@@ -9,7 +9,9 @@
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_solid</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\crateland</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\player_step.gml</script>
@@ -23,6 +25,7 @@
     <object>objects\obj_game</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\level_01</room>
     <room>rooms\room0</room>
   </rooms>
   <help>

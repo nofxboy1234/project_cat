@@ -1,0 +1,4 @@
+Make sure there's a background folder created before importing back into GM:S
+Make sure there's no solid background colour set for the room...
+Turn off obj_solid visibility
+Add any "invisible" objects back to the room after updating room. e.g. obj_game
