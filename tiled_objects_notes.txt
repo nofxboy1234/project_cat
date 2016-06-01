@@ -1,3 +1,9 @@
+versions of programs tiled_objects works with:
+GMS: 1.4.1757
+Tiled: 0.12.3
+
+Tiled map format: Orthogonal XML
+
 Make sure there's a background folder created before importing back into GM:S
 Make sure there's no solid background colour set for the room...
 Turn off obj_solid visibility
