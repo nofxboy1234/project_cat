@@ -1,6 +1,7 @@
 from PySide.QtGui import *
 
 import tiled_object
+import sys
 
 class TiledObjectsToGMS(QDialog):
     def __init__(self):
@@ -140,7 +141,8 @@ class TiledObjectsToGMS(QDialog):
         if file_name != "":
             self.line_edit_tiled_map.setText(file_name)
 
-app = QApplication([])
+# app = QApplication([])
+app = QApplication(sys.argv)
 
 dialog = TiledObjectsToGMS()
 dialog.show()

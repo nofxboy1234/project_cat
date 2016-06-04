@@ -25,7 +25,7 @@ options = {
 }
 
 executables = [
-    Executable('pyside_test.py', base=base)
+    Executable('gms_tiled_link.py', base=base)
 ]
 
 setup(name='tiled_object',
