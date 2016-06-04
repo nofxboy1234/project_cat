@@ -1,10 +1,9 @@
 /// Platform physics
 
-
-
 left = obj_game.left;
 right = obj_game.right;
 jump = obj_game.jump;
+// jump_cancel = obj_game.jump_cancel;
 
 // Check for ground
 if (place_meeting(x, y+1, obj_solid))
@@ -20,15 +19,16 @@ if (place_meeting(x, y+1, obj_solid))
 else
 {
     // Gravity
-    if (vspd < 10)
-    {
-        vspd += grav;
-    }
+    vspd += grav;
+    // if (vspd < max_grav)
+    // {
+    //     vspd += grav;
+    // }
 
-    if (keyboard_check_released(vk_up) && vspd < -4)
-    {
-        vspd = -4;
-    }
+    // if (jump_cancel) && (vspd < -jump_cancel_spd)
+    // {
+    //     vspd = -jump_cancel_spd;
+    // }
 }
 
 // Moving right
@@ -36,7 +36,7 @@ if (right)
 {
     if (hspd < spd)
     {
-        hspd += fric;
+        hspd += accel;
     }
     else
     {
@@ -49,7 +49,7 @@ if (left)
 {
     if (hspd > -spd)
     {
-        hspd -= fric;
+        hspd -= accel;
     }
     else
     {
@@ -64,11 +64,11 @@ if ((!right && !left) || (right && left))
     {
         if (hspd < 0)
         {
-            hspd += fric;
+            hspd += accel;
         }
         else
         {
-            hspd -= fric;
+            hspd -= accel;
         }
     }
 }
@@ -96,5 +96,5 @@ if (place_meeting(x, y+vspd, obj_solid))
     vspd = 0;
 }
 
-// Move horizontally
+// Move vertically
 y += vspd;

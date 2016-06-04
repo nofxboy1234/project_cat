@@ -1,8 +1,11 @@
 /// Init variables
-grav = 1;
-spd = 4;
-jspd = 18;
 hspd = 0;
-vspd = 0;
+accel = 2;
+spd = 12;
 
-fric = 1
+vspd = 0;
+// jump_cancel_spd = 10;
+jspd = 25;
+
+grav = 2;
+max_grav = 20; // terminal velocity
